@@ -1,0 +1,11 @@
+POST /bombing HTTP/1.1
+Host: www.dibombjasbinplanted.com
+Content-Type: application/x-www-form-urlencoded
+Tag: d293e656353386647bef31070414e85dee1b35d8e3a2237f330277b824679b9955c086247a148295ba9df68f763b31dded09475da0fd5cd5bfbed0a29562f06b
+User-Agent: Mozilla/5.0 (Windows; U; Win 9x 4.90; SG; rv:1.9.2.4) Gecko/20101104 Netscape/9.1.0285
+Connection: keep-alive
+Accept: text/html,application/xhtml
+
+b'bombing=true&bananas=missing&action=activate&monkeys=ontheway'
+
+'

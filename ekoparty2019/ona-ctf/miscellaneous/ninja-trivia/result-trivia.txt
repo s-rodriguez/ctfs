@@ -1,0 +1,164 @@
+EBIRTEHTNIOJ
+
+zen@zen-VirtualBox:/media/sf_ona-ctf/eko19/miscellaneous/ninja-trivia$ ./trivia
+*****************************************************************
+*****************************************************************
+** ________              ___________      .__      .__         **
+** \_____  \   ____ _____\__    ___/______|__|__  _|__|____    **
+**  /   |   \ /    \\__  \ |    |  \_  __ \  \  \/ /  \__  \   **
+** /    |    \   |  \/ __ \|    |   |  | \/  |\   /|  |/ __ \_ **
+** \_______  /___|  (____  /____|   |__|  |__| \_/ |__(____  / **
+**         \/     \/     \/                                \/  **
+*****************************************************************
+*****************************************************************
+**                                                             **
+**         Bienvenida/os a la Trivia de Onapsis!!              **
+**                                                             **
+**+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++**
+**                                                             **
+** La trivia consta de una serie de 12 preguntas sobre SAP     **
+** y ciberseguridad. Prestale atención a las respuestas!       **
+** Estás lista/o?? Buena suerte!!!                             **
+**                                                             **
+** Ingresá el usuario Standard: EARLYWATCH
+** Ingresá su Default Password: ******* SUPPORT
+** Estás adentro ( •̀ᴗ•́ )و ̑̑.                                    **
+**+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++**
+
+**#############################################################**
+**                                                             **
+**                        Pregunta nro 01                      **
+**                                                             **
+**#############################################################**
+Qué clientes se crean en una instalación estándar de SAP?
+E - 000, 001, 066
+F - 000, 066, 300
+G - 000, 001, 300
+** Tu respuesta es: E
+
+**#############################################################**
+**                                                             **
+**                        Pregunta nro 02                      **
+**                                                             **
+**#############################################################**
+Cómo se llama el perfil de mayores permisos en SAP?
+A - SAP_FOREVER
+B - SAP_ALL
+C - ADMIN_SAP
+** Tu respuesta es: B
+
+**#############################################################**
+**                                                             **
+**                        Pregunta nro 03                      **
+**                                                             **
+**#############################################################**
+Cómo se llama la plataforma de integración en SAP?
+G - Basis
+H - ServerCore
+I - Netweaver
+** Tu respuesta es: I
+
+**#############################################################**
+**                                                             **
+**                        Pregunta nro 04                      **
+**                                                             **
+**#############################################################**
+Cuál es la comunicación entre sistemas SAP más usada?
+Q - TCP/IP
+R - RFC
+S - No se puede establecer una comunicación entre varios SAP
+** Tu respuesta es: R
+
+**#############################################################**
+**                                                             **
+**                        Pregunta nro 05                      **
+**                                                             **
+**#############################################################**
+Cuántas veces al año salen parches de seguridad de SAP?
+T - 12
+U - 24
+V - 36
+** Tu respuesta es: T
+
+**#############################################################**
+**                                                             **
+**                        Pregunta nro 06                      **
+**                                                             **
+**#############################################################**
+Qué Base de Datos usa SAP generalmente?
+C - Oracle
+D - HANA
+E - Todas las anteriores
+** Tu respuesta es: E
+
+**#############################################################**
+**                                                             **
+**                        Pregunta nro 07                      **
+**                                                             **
+**#############################################################**
+Cuál de las siguientes Normas aplica para Seguridad Informática?
+G - ISO-9001
+H - ISO-27001
+I - ISO-14001
+** Tu respuesta es: H
+
+**#############################################################**
+**                                                             **
+**                        Pregunta nro 08                      **
+**                                                             **
+**#############################################################**
+Cuál de estos representa un código de error de servidor de una página web?
+T - 500
+U - 400
+V - 200
+** Tu respuesta es: T
+
+**#############################################################**
+**                                                             **
+**                        Pregunta nro 09                      **
+**                                                             **
+**#############################################################**
+Según OWASP, cuál es el ataque más común de ciberseguridad?
+L - XSS
+M - Error de configuración
+N - Inyección
+** Tu respuesta es: N
+
+**#############################################################**
+**                                                             **
+**                        Pregunta nro 10                      **
+**                                                             **
+**#############################################################**
+Para qué podría servir cumplir con las normas “SOX”?
+I - Generar transparencia sobre la contabilidad de la empresa y poder cotizar en la bolsa
+J - Generar medidas burocráticas que permitan un avance paulatino de la empresa.
+K - Todas las anteriores
+** Tu respuesta es: I
+
+**#############################################################**
+**                                                             **
+**                        Pregunta nro 11                      **
+**                                                             **
+**#############################################################**
+Qué es un “keylogger”?
+N - Un software que registra las actividades realizadas por el usuario
+O - Un hardware que registra las actividades realizadas por el usuario
+P - Todas las anteriores
+** Tu respuesta es: P ---> Deberia ser 0
+
+**#############################################################**
+**                                                             **
+**                        Pregunta nro 12                      **
+**                                                             **
+**#############################################################**
+A qué se hace referencia cuando se habla de “Man in the middle”?
+H - A una persona que pregunta algo a un desconocido
+I - A hacer un forense en un sistema
+J - A un actor malicioso que se entromete en una conversación
+** Tu respuesta es: J
+
+
+*****************************************************************
+** Eso fue todo. Llegaste al final!                            **
+** Esperamos que hayas prestado atención... ( •̀ᴗ•́ )و ̑̑.         **
+*****************************************************************

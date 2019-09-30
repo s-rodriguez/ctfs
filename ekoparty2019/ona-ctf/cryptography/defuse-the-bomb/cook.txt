@@ -1,0 +1,85 @@
+WHIRLPOOL uses a 64-byte blocksize and reserves 32 bytes for the length field.
+
+tag - d293e656353386647bef31070414e85dee1b35d8e3a2237f330277b824679b9955c086247a148295ba9df68f763b31dded09475da0fd5cd5bfbed0a29562f06b
+
+data     - bombing=true&bananas=missing&action=activate&monkeys=ontheway
+data hex - 626f6d62696e673d747275652662616e616e61733d6d697373696e6726616374696f6e3d6163746976617465266d6f6e6b6579733d6f6e746865776179
+
+secret        - b"Th1s1sS3cure4sH3ll" + os.urandom(14)
+secret length - 32
+
+
+append     - &action=defuse
+append hex - 26616374696f6e3d646566757365
+
+
+
+
+
+./hash_extender --data 'bombing=true&bananas=missing&action=activate&monkeys=ontheway' --secret 32 --append '&action=defuse' --signature 'd293e656353386647bef31070414e85dee1b35d8e3a2237f330277b824679b9955c086247a148295ba9df68f763b31dded09475da0fd5cd5bfbed0a29562f06b' --format whirlpool
+./hash_extender --data '626f6d62696e673d747275652662616e616e61733d6d697373696e6726616374696f6e3d6163746976617465266d6f6e6b6579733d6f6e746865776179' --data-format hex --secret 32 --append '26616374696f6e3d646566757365' --append-format hex --signature 'd293e656353386647bef31070414e85dee1b35d8e3a2237f330277b824679b9955c086247a148295ba9df68f763b31dded09475da0fd5cd5bfbed0a29562f06b' --format whirlpool
+
+
+whirlpool
+  - block size: 64 bytes
+  - length size: 32 bytes (big-endian)
+
+secret+data = 93bytes (744bits)
+
+- padding needed: 128 (64*2) - 93 - 32 = 3 (80 00 00 o big endian ==> 00 00 01)
+
+-----------secret (32)----------|---------------------------data (61)-------------------------|-pad (3)|-----------length (32)----------|
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX|bombing=true&bananas=missing&action=activate&monkeys=ontheway|80 00 00|
+
+
+
+
+secret  (32)  |  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+data    (61)  |  bombing=true&bananas=missing&action=activate&monkeys=ontheway
+padding (3)   |  x80x00x00
+length  (32)  |  x00x00x00x00x00x00x00x00x00x00x00x00x00x00x00x00x00x00x00x00x00x00x00x00x00x00x00x00x00x00x00x5D
+
+
+Hash Block with padding added
+
+0   XXXXXXXXXXXXXXXX
+1   XXXXXXXXXXXXXXXX
+2   bombing=true&ban
+3   anas=missing&act
+4   ion=activate&mon
+5   keys=ontheway x80x00x00
+6   x00x00x00x00x00x00x00x00x00x00x00x00x00x00x00x00
+7   x00x00x00x00x00x00x00x00x00x00x00x00x00x00x00x5D
+
+
+APPENDING - &action=defuse
+0   XXXXXXXXXXXXXXXX
+1   XXXXXXXXXXXXXXXX
+2   bombing=true&ban
+3   anas=missing&act
+4   ion=activate&mon
+5   keys=ontheway x80x00x00
+6   x00x00x00x00x00x00x00x00x00x00x00x00x00x00x00x00
+7   x00x00x00x00x00x00x00x00x00x00x00x00x00x00x00x5D
+8   &action=defusex80x00
+
+
+
+0  'd293e65635338664'
+1  '7bef31070414e85d'
+2  'ee1b35d8e3a2237f'
+3  '330277b824679b99'
+4  '55c086247a148295'
+5  'ba9df68f763b31dd'
+6  'ed09475da0fd5cd5'
+7  'bfbed0a29562f06b'
+
+
+'0xd293e65635338664'
+'0x7bef31070414e85d'
+'0xee1b35d8e3a2237f'
+'0x330277b824679b99'
+'0x55c086247a148295'
+'0xba9df68f763b31dd'
+'0xed09475da0fd5cd5'
+'0xbfbed0a29562f06b'
