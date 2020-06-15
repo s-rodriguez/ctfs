@@ -1,5 +1,14 @@
 # CTFs
 
+## Upcoming CTFs
+- https://ctftime.org/event/list/
+
+### Past Cons Writeups
+
+Nahamcon 2020
+ - https://bigpick.github.io/TodayILearned/articles/2020-06/nahamConCTF-writeups
+ - https://medium.com/bugbountywriteup/nahamcon-2020-ctf-writeup-33105bee3ffd
+
 ## Tools
 
 ### Disk Recovery Tool
