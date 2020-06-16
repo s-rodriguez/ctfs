@@ -8,6 +8,7 @@
 Nahamcon 2020
  - https://bigpick.github.io/TodayILearned/articles/2020-06/nahamConCTF-writeups
  - https://medium.com/bugbountywriteup/nahamcon-2020-ctf-writeup-33105bee3ffd
+ - https://github.com/W3rni0/NahamCon_CTF_2020
 
 ## Tools
 
