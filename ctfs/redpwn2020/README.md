@@ -1,3 +1,5 @@
+# Redpwn 2020 Write Ups
+
 # Table of Contents
 - [web](#web)
   - [Inspector-General](#inspector-general)
@@ -37,7 +39,7 @@ flag{0bl1g4t0ry_5ql1}
 ```
 
 ### Solution
-By analyzing the [source code given](https://github.com/s-rodriguez/ctfs/ctfs/redpwn2020/web/login/index.js), we see that there is no sanitization over username and password when doing the SQL query, and if something a result is returned by the query, the page will print the flag.
+By analyzing the [source code given](https://github.com/s-rodriguez/ctfs/blob/master/ctfs/redpwn2020/web/login/index.js), we see that there is no sanitization over username and password when doing the SQL query, and if something a result is returned by the query, the page will print the flag.
 
 Use basic SQL Injection in the password. comment end of query with -- (sqlite)
 
@@ -48,7 +50,7 @@ password: password' OR 1=1--
 
 Pop-up with the flag appears
 
-![SQLInjection done](https://github.com/s-rodriguez/ctfs/ctfs/redpwn2020/web/login/screenshots/login_sqli.png)
+![SQLInjection done](https://github.com/s-rodriguez/ctfs/blob/master/ctfs/redpwn2020/web/login/screenshots/login_sqli.png)
 
 ---
 
@@ -62,16 +64,16 @@ flag{54n1t1z4t10n_k1nd4_h4rd}
 ### Introduction
 We are given a web page that accepts any kind of input, with a button that will "store" the text.
 
-![User web page](https://github.com/s-rodriguez/ctfs/ctfs/redpwn2020/web/static-pastebin/screenshots/store_text_page.png)
+![User web page](https://github.com/s-rodriguez/ctfs/blob/master/ctfs/redpwn2020/web/static-pastebin/screenshots/store_text_page.png)
 
 And a different website (an admin site) where the challenge recommends you place your link if you face any "issue"
 
-![Admin web page](https://github.com/s-rodriguez/ctfs/ctfs/redpwn2020/web/static-pastebin/screenshots/admin_oage.png)
+![Admin web page](https://github.com/s-rodriguez/ctfs/blob/master/ctfs/redpwn2020/web/static-pastebin/screenshots/store_text_page.png)
 
 ### Solution
-By looking at the [source code of the page](https://github.com/s-rodriguez/ctfs/ctfs/redpwn2020/web/static-pastebin/first_script.js) that stores text we see that the link is then conformed by doing an `atob(text)`
+By looking at the [source code of the page](https://github.com/s-rodriguez/ctfs/blob/master/ctfs/redpwn2020/web/static-pastebin/first_script.js) that stores text we see that the link is then conformed by doing an `atob(text)`
 
-When adding text and submitting the `Create` button, we can [analyze the second source](https://github.com/s-rodriguez/ctfs/ctfs/redpwn2020/web/static-pastebin/second_script.js), which performs a sanitization over the text
+When adding text and submitting the `Create` button, we can [analyze the second source](https://github.com/s-rodriguez/ctfs/blob/master/ctfs/redpwn2020/web/static-pastebin/second_script.js), which performs a sanitization over the text
 
 Considering there is another admin page which needs the link to check for issues, we can try doing some kind of XSS. And most probably, the flag could be contained within the cookies
 
@@ -136,7 +138,7 @@ flag{us3_zsh,_dummy}
 ```
 
 ### Analysis & Solution
-If we open the [script](https://github.com/s-rodriguez/ctfs/ctfs/redpwn2020/misc/ugly-bash/cmd.sh), it's basically obfuscated code, so it'll be impossible to simply find the flag.
+If we open the [script](https://github.com/s-rodriguez/ctfs/blob/master/ctfs/redpwn2020/misc/ugly-bash/cmd.sh), it's basically obfuscated code, so it'll be impossible to simply find the flag.
 
 However, we can run the script in `DEBUG` mode with `-x` and it will print every line evaluation, along with the flag!
 
@@ -162,7 +164,7 @@ flag{vm_1snt_s4f3_4ft3r_41l_29ka5sqD}
 ```
 
 ### Introduction
-By looking at the [javascript provided](https://github.com/s-rodriguez/ctfs/ctfs/redpwn2020/misc/CaaSINO/calculator.js), we see that the code the "calculator" executes is running with `vm`, a lib used to execute JS code in Sandbox mode. (https://nodejs.org/api/vm.html)
+By looking at the [javascript provided](https://github.com/s-rodriguez/ctfs/blob/master/ctfs/redpwn2020/misc/CaaSINO/calculator.js), we see that the code the "calculator" executes is running with [vm](https://nodejs.org/api/vm.html), a lib used to execute JS code in Sandbox mode.
 
 So we're bsaically inside a NodeJSJail!
 
@@ -272,8 +274,8 @@ flag{9u3ss1n9_1s_4n_4rt}
 
 ### Analysis done
 We are handed to image files:
-- [chipertext.jpg](https://github.com/s-rodriguez/ctfs/ctfs/redpwn2020/crypto/12-shades-of-redpwn/chipertext.jpg)
-- [color-wheel.jpg](https://github.com/s-rodriguez/ctfs/ctfs/redpwn2020/crypto/12-shades-of-redpwn/color-wheel.jpg)
+- [chipertext.jpg](https://github.com/s-rodriguez/ctfs/blob/master/ctfs/redpwn2020/crypto/12-shades-of-redpwn/ciphertext.jpg)
+- [color-wheel.jpg](https://github.com/s-rodriguez/ctfs/blob/master/ctfs/redpwn2020/crypto/12-shades-of-redpwn/color-wheel.jpg)
 
 By looking at the color-wheel, we can see that each color from it can be found in the ciphertext image as well. And the hint states it looks like a clock, so let's give numbers to the ciphertext color boxes.
 
@@ -315,7 +317,7 @@ Ciphertext: 00100011000010001111010110000001110100110001111001001011010111001100
 ```
 
 ### Analysis of the provided source code
-Looking at the code provided, we see that those (i,j) inputs are being to calculate a `lower_bound` and an `uper_bound`:
+Looking at the [code provided](https://github.com/s-rodriguez/ctfs/blob/master/ctfs/redpwn2020/crypto/itsy-bitsy/itsy-bitsy_original.py), we see that those (i,j) inputs are being to calculate a `lower_bound` and an `uper_bound`:
 
 ```python
     ...
@@ -424,7 +426,7 @@ def build_flag(partial_flags):
 flag{bits_leaking_out_down_the_water_spout}
 ```
 
-> Complete code used to perform the automatic decipher [here](https://github.com/s-rodriguez/ctfs/ctfs/redpwn2020/crypto/itsy-bitsy/1_straight_forward_solution/solution.py)
+> Complete code used to perform the automatic decipher [here](https://github.com/s-rodriguez/ctfs/blob/master/ctfs/redpwn2020/crypto/itsy-bitsy/1_straight_forward_solution/solution.py)
 
 ### 2 - Kind of a Solution (The jump into a hurricane that got me to Oz)
 Ok, even though this is not the correct way to solve the challenge, it's the path that I took until I realized I messed up at some point along the way.
@@ -528,7 +530,7 @@ And obviously, as I advanced with this logic I kept thinking "this probably isn'
 
 And that's when I decided to put a break on this and backtrack my mess up.
 
-> Code leading to this point with the candidates and possible chars per position are located [here](https://github.com/s-rodriguez/ctfs/ctfs/redpwn2020/crypto/itsy-bitsy/2_hurricane_to_oz_solution)
+> Code leading to this point with the candidates and possible chars per position are located [here](https://github.com/s-rodriguez/ctfs/tree/master/ctfs/redpwn2020/crypto/itsy-bitsy/2_hurricane_to_oz_solution)
 
 Anyway, it was fun :)
 
@@ -545,7 +547,7 @@ flag{4ft3r_y0u_put_u54c0_0n_y0ur_c011ege_4pp5_y0u_5t1ll_h4ve_t0_d0_th15_57uff}
 ```
 
 ### Introduction
-We are provided with an [ELF file](https://github.com/s-rodriguez/ctfs/ctfs/redpwn2020/pwn/bubbly/bubbly)
+We are provided with an [ELF file](https://github.com/s-rodriguez/ctfs/blob/master/ctfs/redpwn2020/rev/bubbly/bubbly)
 
 ```
 $ file bubbly
@@ -607,7 +609,7 @@ _Bool check(void)
 }
 ```
 
-> You can see the full dissasembly code [here](https://github.com/s-rodriguez/ctfs/ctfs/redpwn2020/pwn/bubbly/bubbly.c)
+> You can see the full dissasembly code [here](https://github.com/s-rodriguez/ctfs/blob/master/ctfs/redpwn2020/rev/bubbly/bubbly.c)
 
 After doing some analysis, we can see that Bubbly is sorting an array by using... yes... bubble sort!
 
@@ -638,7 +640,7 @@ flag{r0pes_ar3_just_l0ng_str1ngs}
 ```
 
 ### Solution
-Using strings command over the [given file](https://github.com/s-rodriguez/ctfs/ctfs/redpwn2020/rev/ropes/ropes), gives you the flag
+Using strings command over the [given file](https://github.com/s-rodriguez/ctfs/blob/master/ctfs/redpwn2020/rev/ropes/ropes), gives you the flag
 
 ```
 $ strings ropes
