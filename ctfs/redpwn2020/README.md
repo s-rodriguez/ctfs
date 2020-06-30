@@ -274,8 +274,14 @@ flag{9u3ss1n9_1s_4n_4rt}
 
 ### Analysis done
 We are handed to image files:
-- [chipertext.jpg](https://github.com/s-rodriguez/ctfs/blob/master/ctfs/redpwn2020/crypto/12-shades-of-redpwn/ciphertext.jpg)
-- [color-wheel.jpg](https://github.com/s-rodriguez/ctfs/blob/master/ctfs/redpwn2020/crypto/12-shades-of-redpwn/color-wheel.jpg)
+
+**ciphertext.jpg**
+
+![chipertext.jpg](https://github.com/s-rodriguez/ctfs/blob/master/ctfs/redpwn2020/crypto/12-shades-of-redpwn/ciphertext.jpg)
+
+**color-wheel.jpg**
+
+![color-wheel.jpg](https://github.com/s-rodriguez/ctfs/blob/master/ctfs/redpwn2020/crypto/12-shades-of-redpwn/color-wheel.jpg)
 
 By looking at the color-wheel, we can see that each color from it can be found in the ciphertext image as well. And the hint states it looks like a clock, so let's give numbers to the ciphertext color boxes.
 
