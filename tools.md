@@ -8,6 +8,7 @@
 - [StegoToolkit](https://github.com/DominicBreuker/stego-toolkit)
 - [Audacity](https://www.audacityteam.org/) (Use Spectrogram functionality)
 - [Steghide](http://steghide.sourceforge.net/index.php)
+- [GitShuffle](http://manpages.ubuntu.com/manpages/bionic/man1/gifshuffle.1.html)
 
 ### Web / Discovery
 
