@@ -1,5 +1,14 @@
+## Useful Links
+- [CTF Katana](https://github.com/JohnHammond/ctf-katana)
+- [CyberChef](http://icyberchef.com/)
+- [Awesome CTF](https://apsdehal.in/awesome-ctf/)
+- [Top 10 Essential CTF Tools For Solving Reversing Challenges](https://www.yeahhub.com/top-10-essential-ctf-tools-solving-reversing-challenges/)
+- [How to get started in CTF](https://medium.com/hackcura/how-to-prepare-for-ctfs-and-start-playing-ctfs-7e9d1fd169ee)
 
-### Disk Recovery Tool
+
+## Tools
+
+### Disk Recovery
 
 - [Photorec](https://www.cgsecurity.org/wiki/PhotoRec_ES)
 - [Testdisk](https://www.cgsecurity.org/wiki/TestDisk)
@@ -17,6 +26,7 @@
 - [Dirbuster](https://github.com/KajanM/DirBuster)
 - [Gobuster](https://github.com/OJ/gobuster)
 - [nmap](https://nmap.org/)
+- [Request.bin](https://requestbin.com/)
 
 ### SQL
 
@@ -37,8 +47,3 @@
 
 ### Malware signatures
 - [sdhash](https://github.com/sdhash/sdhash)
-
-### Useful Links
-- [Awesome CTF](https://apsdehal.in/awesome-ctf/)
-- [Top 10 Essential CTF Tools For Solving Reversing Challenges](https://www.yeahhub.com/top-10-essential-ctf-tools-solving-reversing-challenges/)
-- [How to get started in CTF](https://medium.com/hackcura/how-to-prepare-for-ctfs-and-start-playing-ctfs-7e9d1fd169ee)
