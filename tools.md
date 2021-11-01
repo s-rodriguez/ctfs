@@ -34,3 +34,11 @@
 ### Wordlists
 
 - [SecList](https://github.com/danielmiessler/SecLists)
+
+### Malware signatures
+- [sdhash](https://github.com/sdhash/sdhash)
+
+### Useful Links
+- [Awesome CTF](https://apsdehal.in/awesome-ctf/)
+- [Top 10 Essential CTF Tools For Solving Reversing Challenges](https://www.yeahhub.com/top-10-essential-ctf-tools-solving-reversing-challenges/)
+- [How to get started in CTF](https://medium.com/hackcura/how-to-prepare-for-ctfs-and-start-playing-ctfs-7e9d1fd169ee)
