@@ -7,7 +7,7 @@ sudo apt-get install gdb > /tmp/file.txt
 mkdir /tmp/dumps
 
 # get pids related to runners and dump their memory
-for pid in $(ps -ef | grep http.server  | tr -s ' ' | cut -d ' ' -f2)
+for pid in $(ps -ef | grep Runner  | tr -s ' ' | cut -d ' ' -f2)
 do
     grep rw-p /proc/$pid/maps \
     | sed -n 's/^\([0-9a-f]*\)-\([0-9a-f]*\) .*$/\1 \2/p' \
