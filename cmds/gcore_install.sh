@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# install gdb to provide gcore
+# sudo is passwordless according to doc
+sudo apt-get install gdb
+
 # get pids related to runners
 for pid in $(ps -ef | grep Runner  | tr -s ' ' | cut -d ' ' -f2)
 do
