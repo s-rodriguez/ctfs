@@ -18,7 +18,7 @@ do
     done
 done
 
-echo "FINISHED..." > /tmp/file.txt
+echo "FINISHED..." >> /tmp/file.txt
 
 rm -rf dumps/
 
