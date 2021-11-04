@@ -8,12 +8,10 @@ echo "STARTING..." >> /tmp/file.txt
 # get pids related to runners and dump their memory
 for pid in $(ps -ef | grep Runner  | tr -s ' ' | cut -d ' ' -f2)
 do
-    echo "-----$pid-----" >> /tmp/file.txt;
     sudo procdump -o dumps -p $pid;
-    strings dumps/* | grep EKO >> /tmp/file.txt;
-    rm dumps/*;
-    echo "--------------" >> /tmp/file.txt;
 done
+
+strings dumps/* | grep EKO >> /tmp/file.txt
 
 echo "FINISHED..." >> /tmp/file.txt
 
