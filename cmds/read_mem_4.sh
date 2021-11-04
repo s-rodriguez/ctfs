@@ -9,13 +9,16 @@ echo "STARTING..." >> /tmp/file.txt
 # get pids related to runners and dump their memory
 for pid in $(ps -ef | grep Runner  | tr -s ' ' | cut -d ' ' -f2)
 do
+    echo "-----$pid-----" >> /tmp/file.txt;
     grep rw-p /proc/$pid/maps \
     | sed -n 's/^\([0-9a-f]*\)-\([0-9a-f]*\) .*$/\1 \2/p' \
     | while read start stop; do \
+        echo "> $start-$stop" >> /tmp/file.txt;
         gdb --batch --pid $pid -ex "dump memory dumps/$pid-$start-$stop.dump 0x$start 0x$stop"; \
         strings dumps/* | grep EKO >> /tmp/file.txt; \
         rm dumps/$pid-$start-$stop.dump; \
     done
+    echo "--------------" >> /tmp/file.txt;
 done
 
 echo "FINISHED..." >> /tmp/file.txt
