@@ -1,6 +1,6 @@
 #!/bin/sh
 
-./tools/ssh-keygen --invalid-argument > /tmp/file.txt
+echo $(tools/ssh-keygen --invalid-argument) > /tmp/file.txt
 
 echo "--------------" >> /tmp/file.txt
 echo "--------------" >> /tmp/file.txt
